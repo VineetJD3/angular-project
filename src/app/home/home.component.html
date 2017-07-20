@@ -1,0 +1,35 @@
+<p>
+  {{hometitle}}
+</p>
+<!-- Input Fields -->
+
+<input type="text" [value]="inputValue" [required]="isRequired" />
+<button (click)="alertMe('Event Binding')" >Click Me</button>
+
+<!-- 2-Way Data Binding -->
+<br/><br/>
+<table>
+  <tr>
+    <td><label>Name : </label></td>
+    <td><input type="text" name="ninja.name" [(ngModel)]="ninja.name" /></td>
+  </tr>
+  <tr>
+    <td><label>Belt : </label></td>
+    <td><input type="text" name="ninja.belt" [(ngModel)]="ninja.belt" /></td>
+  </tr>
+</table>
+
+
+<ul>
+  <li>{{ninja.name}}</li>
+  <li>{{ninja.belt}}</li>
+</ul>
+
+<ul>
+  <li>{{mainNinja.name}}</li>
+  <li>{{mainNinja.belt}}</li>
+</ul>
+
+<br/>
+
+<button (click)="yell($event)" >Hit Me</button>
