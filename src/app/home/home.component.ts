@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { AppComponent } from '../app.component';
 
 @Component({
   inputs: ["mainNinja"],

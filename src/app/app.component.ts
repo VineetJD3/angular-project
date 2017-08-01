@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HomeComponent } from './home/home.component';
+import { Routes, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,7 @@ import { HomeComponent } from './home/home.component';
   entryComponents: [HomeComponent]
 })
 export class AppComponent {
-  title = 'Angular Project';
+  /*title = 'Angular Project';
 
   mainNinja = {
     name : "Saurabh",
@@ -18,5 +19,5 @@ export class AppComponent {
   yell(e){
     alert("I am Yelling...")
     console.log(e)
-  }
+  }*/
 }
