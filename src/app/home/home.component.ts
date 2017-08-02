@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { AppComponent } from '../app.component';
+import { LoggingService } from '../logging.service';
 
 @Component({
   inputs: ["mainNinja"],
@@ -7,6 +8,7 @@ import { AppComponent } from '../app.component';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
+  providers: [LoggingService]
 })
 export class HomeComponent implements OnInit {
 
@@ -16,7 +18,11 @@ export class HomeComponent implements OnInit {
   onYell = new EventEmitter();
 
 
-  constructor() { }
+  constructor(private logger : LoggingService) { }
+
+  logIt(){
+    this.logger.log();
+  }
 
   ngOnInit() {
   }
